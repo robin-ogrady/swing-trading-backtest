@@ -1,0 +1,7 @@
+{
+ "made": "2026-09-27 11:51:53",
+ "primary": "stocks/rsi2 PICKED (rs + score top 20%) has Sharpe above SPY buy&hold AND beats >= 95% of 1000 random-entry runs in the final period (2023-01-01 on).",
+ "why_primary": "only config whose entry beat random entries in BOTH dev (p=0.001) and validation (p=0.002), no parameter collapse at +/-30%, BHY-haircut dev Sharpe still 0.63.",
+ "secondary_all_reported": "naive, ALL LAYERS and PICKED for every stocks/crypto setup; naive and ALL LAYERS for forex.",
+ "failure_means": "if the primary fails, no rule set in this project is considered to have shown an edge."
+}

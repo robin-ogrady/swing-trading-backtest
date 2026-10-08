@@ -1,0 +1,46 @@
+PHASE 5: FINAL untouched period, run once. picks file sha1 4092003f762e, frozen 2026-09-27 11:08:11
+pre-registered primary hypothesis (2026-09-27 11:51:53): stocks/rsi2 PICKED (rs + score top 20%) has Sharpe above SPY buy&hold AND beats >= 95% of 1000 random-entry runs in the final period (2023-01-01 on).
+every candidate below is reported; nothing is dropped after seeing these numbers.
+
+===== STOCKS final period from 2023-01-01 =====
+                                        CAGR   Sharpe  Sortino    MaxDD   Trades      /yr      Win   AvgW R   AvgL R    Exp R       PF     Expo    InMkt  LoseRun  Cost/GP
+SPY buy&hold                           22.4%     1.43     2.16   -18.8%               n/a      n/a      n/a      n/a      n/a      n/a      n/a      n/a               n/a
+S&P500-today EW (survivor biased)      19.8%     1.33     2.00   -17.9%               n/a      n/a      n/a      n/a      n/a      n/a      n/a      n/a               n/a
+naive breakout                         -1.8%    -0.04    -0.05   -26.9%      801      215      36%      n/a      n/a   -0.044     0.98     0.75      n/a               n/a
+ALL LAYERS breakout                     5.0%     0.50     0.75   -13.7%      172       46      35%      n/a      n/a    0.069     1.27     0.28      n/a               n/a
+PICKED breakout                         4.7%     0.36     0.52   -19.4%      289       78      28%      n/a      n/a    0.095     1.14     0.66      n/a               n/a
+naive pullback                          1.5%     0.18     0.24   -19.7%      491      132      40%      n/a      n/a    0.024     1.03     0.77      n/a               n/a
+ALL LAYERS pullback                     4.2%     0.43     0.62   -13.9%      163       44      40%      n/a      n/a    0.194     1.20     0.36      n/a               n/a
+PICKED pullback                         3.0%     0.26     0.36   -19.7%      337       91      36%      n/a      n/a    0.063     1.07     0.82      n/a               n/a
+naive rsi2                              2.6%     0.25     0.35   -20.3%     1286      345      63%      n/a      n/a    0.011     1.04     0.76      n/a               n/a
+ALL LAYERS rsi2                         4.3%     0.64     0.96   -15.5%      460      123      67%      n/a      n/a    0.045     1.25     0.20      n/a               n/a
+PICKED rsi2                             7.1%     0.56     0.82   -14.9%      892      239      64%      n/a      n/a    0.032     1.16     0.47      n/a               n/a
+  PICKED breakout: Sharpe 95% CI -1.03 to 1.01; beats 46.7% of 1000 random-entry runs (p=0.533)
+  PICKED pullback: Sharpe 95% CI -0.73 to 1.09; beats 9.5% of 1000 random-entry runs (p=0.905)
+  PICKED rsi2: Sharpe 95% CI -0.37 to 1.55; beats 86.6% of 1000 random-entry runs (p=0.134)
+
+===== FOREX final period from 2023-01-01 =====
+                          CAGR   Sharpe  Sortino    MaxDD   Trades      /yr      Win   AvgW R   AvgL R    Exp R       PF     Expo    InMkt  LoseRun  Cost/GP
+naive breakout          -26.5%    -1.25    -1.67   -71.0%      661      177      31%      n/a      n/a   -0.176     0.73     4.08      n/a               n/a
+ALL LAYERS breakout      -9.4%    -1.12    -1.45   -32.9%      159       43      25%      n/a      n/a   -0.419     0.54     0.81      n/a               n/a
+naive pullback           -6.3%    -0.37    -0.52   -23.9%      239       64      35%      n/a      n/a   -0.093     0.84     1.99      n/a               n/a
+ALL LAYERS pullback      -1.6%    -0.32    -0.43   -10.9%       25        7      32%      n/a      n/a   -0.212     0.66     0.35      n/a               n/a
+naive rsi2               -2.8%    -0.12    -0.18   -38.3%      997      268      64%      n/a      n/a   -0.007     0.95     2.66      n/a               n/a
+ALL LAYERS rsi2           0.9%     0.22     0.35    -8.2%      148       40      61%      n/a      n/a    0.025     1.12     0.38      n/a               n/a
+
+===== CRYPTO final period from 2023-01-01 =====
+                          CAGR   Sharpe  Sortino    MaxDD   Trades      /yr      Win   AvgW R   AvgL R    Exp R       PF     Expo    InMkt  LoseRun  Cost/GP
+BTC buy&hold             54.4%     1.16     1.82   -53.0%               n/a      n/a      n/a      n/a      n/a      n/a      n/a      n/a               n/a
+crypto EW buy&hold      -13.7%     0.15     0.21   -90.5%               n/a      n/a      n/a      n/a      n/a      n/a      n/a      n/a               n/a
+naive breakout          -28.4%    -0.46    -0.65   -87.1%     1943      521      36%      n/a      n/a   -0.045     0.90     0.70      n/a               n/a
+ALL LAYERS breakout      -1.6%    -0.05    -0.06   -22.6%      214       57      33%      n/a      n/a    0.116     0.94     0.08      n/a               n/a
+PICKED breakout          -4.5%     0.11     0.16   -69.5%     1009      270      34%      n/a      n/a    0.024     0.97     0.65      n/a               n/a
+naive pullback           -0.5%     0.16     0.24   -51.2%     1244      333      40%      n/a      n/a    0.018     1.00     0.60      n/a               n/a
+ALL LAYERS pullback      -8.8%    -0.61    -0.84   -44.7%      324       87      27%      n/a      n/a   -0.144     0.70     0.12      n/a               n/a
+PICKED pullback         -17.5%    -0.61    -0.91   -53.8%      728      195      46%      n/a      n/a   -0.070     0.75     0.25      n/a               n/a
+naive rsi2              -17.5%    -0.81    -1.09   -54.2%     2285      612      63%      n/a      n/a   -0.028     0.83     0.32      n/a               n/a
+ALL LAYERS rsi2          -3.3%    -0.44    -0.63   -15.7%      487      131      59%      n/a      n/a   -0.023     0.82     0.05      n/a               n/a
+PICKED rsi2             -12.2%    -0.60    -0.79   -47.1%     1628      436      62%      n/a      n/a   -0.026     0.83     0.24      n/a               n/a
+  PICKED breakout: Sharpe 95% CI -0.71 to 1.48; beats 27.5% of 1000 random-entry runs (p=0.725)
+  PICKED pullback: Sharpe 95% CI -1.80 to 0.52; beats 35.0% of 1000 random-entry runs (p=0.650)
+  PICKED rsi2: Sharpe 95% CI -1.46 to 0.49; beats 97.0% of 1000 random-entry runs (p=0.030)

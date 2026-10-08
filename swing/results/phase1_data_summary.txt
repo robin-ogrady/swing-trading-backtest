@@ -1,0 +1,39 @@
+
+===== STOCKS =====
+raw files 499, eligible 499, kept segments 499 (segments too short: 0)
+cleaning: ohlc_fixed=32716, rows_dropped_bad_history=268728
+rows: total 4,113,549, median per symbol 8038
+history: 1962-01-02 to 2026-09-25
+segments that end early (delisted / suspended / relabelled): 0
+tradable symbols on Jan 1: 1995:239 1996:254 1997:276 1998:282 1999:304 2000:316 2001:334 2002:348 2003:361 2004:368 2005:370 2006:382 2007:390 2008:397 2009:409 2010:413 2011:417 2012:427 2013:434 2014:440 2015:450 2016:455 2017:462 2018:465 2019:469 2020:472 2021:481 2022:486 2023:491 2024:493 2025:495 2026:499
+periods: trade from 1995-01-01, dev to 2019-12-31, validate to 2022-12-31, final after (locked)
+  buy&hold equal-weight dev: CAGR 19.5%  Sharpe 1.05  maxDD -50.5%
+  buy&hold equal-weight val: CAGR 13.5%  Sharpe 0.60  maxDD -38.4%
+
+===== FOREX =====
+raw files 142, eligible 28, kept segments 28 (segments too short: 1)
+cleaning: ohlc_fixed=4543, bad_ticks_removed=13, weekend_rows_dropped=24, fx_close_outside_range=32994
+rows: total 169,118, median per symbol 5937
+history: 1996-10-30 to 2026-09-24
+segments that end early (delisted / suspended / relabelled): 0
+tradable symbols on Jan 1: 2005:25 2006:27 2007:27 2008:28 2009:28 2010:28 2011:28 2012:28 2013:28 2014:28 2015:28 2016:28 2017:28 2018:28 2019:28 2020:28 2021:28 2022:28 2023:28 2024:28 2025:28 2026:28
+periods: trade from 2005-01-01, dev to 2019-12-31, validate to 2022-12-31, final after (locked)
+  buy&hold equal-weight dev: CAGR -0.4%  Sharpe -0.07  maxDD -18.8%
+  buy&hold equal-weight val: CAGR 0.7%  Sharpe 0.21  maxDD -4.3%
+
+===== CRYPTO =====
+raw files 497, eligible 480, kept segments 487 (segments too short: 4)
+cleaning: negative_volume_nulled=5, redenominations=5
+split into several segments: COCOSUSDT, KEYUSDT, CVCUSDT, QUICKUSDT, STRAXUSDT, FTTUSDT, LUNAUSDT
+rows: total 744,922, median per symbol 1507
+history: 2017-08-17 to 2026-09-25
+segments that end early (delisted / suspended / relabelled): 168
+tradable symbols on Jan 1: 2018:0 2019:7 2020:36 2021:92 2022:205 2023:291 2024:320 2025:337 2026:360
+periods: trade from 2018-06-01, dev to 2020-12-31, validate to 2022-12-31, final after (locked)
+  buy&hold equal-weight dev: CAGR -2.7%  Sharpe 0.42  maxDD -76.7%
+  buy&hold equal-weight val: CAGR 52.9%  Sharpe 0.95  maxDD -83.3%
+  buy&hold BTC          dev: CAGR 68.7%  Sharpe 1.11  maxDD -63.3%
+  buy&hold BTC          val: CAGR -24.4%  Sharpe -0.02  maxDD -76.6%
+
+WARNING: stocks are today's S&P 500 members. Every stock result (and the stock equal-weight index) is inflated by survivorship bias, more so the further back it goes.
+NOTE: trim_small_files.py already deleted crypto pairs under 500 rows, which removed many coins that listed and died fast, so crypto keeps some survivorship bias too.

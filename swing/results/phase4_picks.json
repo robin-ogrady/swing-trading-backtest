@@ -1,0 +1,207 @@
+{
+ "made": "2026-09-27 11:08:11",
+ "rule": "filters scored + on dev; best + exit on dev; sizing left at naive (it moved DD, not edge)",
+ "configs": {
+  "stocks/breakout": {
+   "layers": [
+    "regime",
+    "vol",
+    "volume",
+    "event",
+    "ATR trail 2.5"
+   ],
+   "cfg": {
+    "setup": "breakout",
+    "setup_params": {
+     "base_len": 20,
+     "stop_atr_min": 0.5,
+     "stop_atr_max": 1.5
+    },
+    "filters": {
+     "regime": true,
+     "vol": true,
+     "volume": true,
+     "event": true
+    },
+    "exits": {
+     "target_r": null,
+     "max_hold": 100,
+     "native_exit": false,
+     "trail_atr": 2.5
+    },
+    "sizing": {
+     "risk_pct": 1.0,
+     "max_positions": 10,
+     "heat_cap": null
+    },
+    "rank": "random"
+   }
+  },
+  "stocks/pullback": {
+   "layers": [
+    "partial 2R + BE + 20MA"
+   ],
+   "cfg": {
+    "setup": "pullback",
+    "setup_params": {
+     "adx_min": 25.0,
+     "lookback": 5,
+     "stop_atr_min": 0.5,
+     "stop_atr_max": 2.0
+    },
+    "filters": {},
+    "exits": {
+     "target_r": null,
+     "max_hold": 100,
+     "native_exit": false,
+     "breakeven": true,
+     "partial": {
+      "frac": 0.5,
+      "at_r": 2.0,
+      "trail_after_partial": true
+     },
+     "trail_ma": 20
+    },
+    "sizing": {
+     "risk_pct": 1.0,
+     "max_positions": 10,
+     "heat_cap": null
+    },
+    "rank": "random"
+   }
+  },
+  "stocks/rsi2": {
+   "layers": [
+    "rs",
+    "score top 20%"
+   ],
+   "cfg": {
+    "setup": "rsi2",
+    "setup_params": {
+     "ma": 200,
+     "entry": 10.0,
+     "exit": 70.0,
+     "stop_atr": 3.0
+    },
+    "filters": {
+     "rs": true,
+     "score": true
+    },
+    "exits": {
+     "target_r": null,
+     "max_hold": 10,
+     "native_exit": true
+    },
+    "sizing": {
+     "risk_pct": 1.0,
+     "max_positions": 10,
+     "heat_cap": null
+    },
+    "rank": "score"
+   }
+  },
+  "crypto/breakout": {
+   "layers": [
+    "vol",
+    "partial 2R + BE + 20MA"
+   ],
+   "cfg": {
+    "setup": "breakout",
+    "setup_params": {
+     "base_len": 20,
+     "stop_atr_min": 0.5,
+     "stop_atr_max": 1.5
+    },
+    "filters": {
+     "vol": true
+    },
+    "exits": {
+     "target_r": null,
+     "max_hold": 100,
+     "native_exit": false,
+     "breakeven": true,
+     "partial": {
+      "frac": 0.5,
+      "at_r": 2.0,
+      "trail_after_partial": true
+     },
+     "trail_ma": 20
+    },
+    "sizing": {
+     "risk_pct": 1.0,
+     "max_positions": 10,
+     "heat_cap": null
+    },
+    "rank": "random"
+   }
+  },
+  "crypto/pullback": {
+   "layers": [
+    "rs",
+    "volume",
+    "score top 20%",
+    "partial 3d + BE + 10MA"
+   ],
+   "cfg": {
+    "setup": "pullback",
+    "setup_params": {
+     "adx_min": 25.0,
+     "lookback": 5,
+     "stop_atr_min": 0.5,
+     "stop_atr_max": 2.0
+    },
+    "filters": {
+     "rs": true,
+     "volume": true,
+     "score": true
+    },
+    "exits": {
+     "target_r": null,
+     "max_hold": 100,
+     "native_exit": false,
+     "breakeven": true,
+     "partial": {
+      "frac": 0.33,
+      "after_bars": 3,
+      "trail_after_partial": true
+     },
+     "trail_ma": 10
+    },
+    "sizing": {
+     "risk_pct": 1.0,
+     "max_positions": 10,
+     "heat_cap": null
+    },
+    "rank": "score"
+   }
+  },
+  "crypto/rsi2": {
+   "layers": [
+    "regime"
+   ],
+   "cfg": {
+    "setup": "rsi2",
+    "setup_params": {
+     "ma": 200,
+     "entry": 10.0,
+     "exit": 70.0,
+     "stop_atr": 3.0
+    },
+    "filters": {
+     "regime": true
+    },
+    "exits": {
+     "target_r": null,
+     "max_hold": 10,
+     "native_exit": true
+    },
+    "sizing": {
+     "risk_pct": 1.0,
+     "max_positions": 10,
+     "heat_cap": null
+    },
+    "rank": "random"
+   }
+  }
+ }
+}
